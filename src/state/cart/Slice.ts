@@ -40,4 +40,4 @@ export const cartSlice = createSlice({
 	},
 });
 
-export const selectCart = (state: RootState) => state.cart;
+export const cartSelect = (state: RootState) => state.cart;

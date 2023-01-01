@@ -1,1 +1,3 @@
-export const conf = {};
+export const conf = {
+	api: process.env.REACT_APP_API_URL || '',
+};

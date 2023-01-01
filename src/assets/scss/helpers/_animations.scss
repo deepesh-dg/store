@@ -1,47 +1,44 @@
 @keyframes fullpageLoader {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes loader-top-line {
-    0% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
 }
 
 @keyframes loader {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
 }
 
 @keyframes sectionBreaker {
-    0% {
-        left: 10%;
-        right: 10%;
-    }
-    50% {
-        left: 20%;
-        right: 20%;
-    }
-    100% {
-        left: 10%;
-        right: 10%;
-    }
+	0% {
+		left: 10%;
+		right: 10%;
+	}
+	50% {
+		left: 20%;
+		right: 20%;
+	}
+	100% {
+		left: 10%;
+		right: 10%;
+	}
 }

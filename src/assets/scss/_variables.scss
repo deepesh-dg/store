@@ -4,24 +4,25 @@
 $dark: #242b2e;
 
 /* Theme Colors */
-$primary: #ffd814;
+// $primary: #ffd814;
+$primary: #ffa41c;
 $secondary: #131921;
-$tertiary: #ffa41c;
+$tertiary: #ffd814;
 $primary-invert: invert($primary);
 
 /* Options */
 $prefix: dg-;
 $enable-gradients: false;
 $enable-shadows: true;
-$border-radius: 0.5rem;
+$border-radius: 0.25rem;
 $border-radius-sm: #{$border-radius * 0.75};
 $border-radius-lg: #{$border-radius * 1.5};
 
 /* Link */
-$link-color: var(--#{$prefix}primary);
-$link-hover-color: var(--#{$prefix}tertiary);
+// $link-color: var(--#{$prefix}primary);
+// $link-hover-color: var(--#{$prefix}tertiary);
 $link-decoration: none;
-$link-hover-decoration: none;
+$link-hover-decoration: underline;
 
 /* Paragraphs */
 $paragraph-margin-bottom: 0rem;
@@ -111,11 +112,11 @@ $box-shadow-spread: $box-shadow-spread-width rgba($black, $box-shadow-spread-alp
 /* scss-docs-end box-shadow-variables */
 
 /* scss-docs-start form-input-variables */
-$input-bg: transparent;
-$input-box-shadow: $box-shadow-sm;
-$input-border-color: $light;
-$input-focus-border-color: $light;
-$input-focus-box-shadow: $box-shadow-sm-width rgba($primary, $box-shadow-alpha);
+// $input-bg: transparent;
+// $input-box-shadow: $box-shadow-sm;
+// $input-border-color: $light;
+// $input-focus-border-color: $light;
+$input-focus-box-shadow: 0 0 3px 2px rgba($primary, 0.5);
 
 /* Setting for <body> element */
 // $body-bg: #ffffff;

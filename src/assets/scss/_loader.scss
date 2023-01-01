@@ -1,98 +1,98 @@
 .progressBarLoader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1100;
 
-    .loader {
-        background: linear-gradient(to right, $secondary 20%, $primary 100%);
-        background-repeat: no-repeat;
-        width: 0%;
-        height: 0.25rem;
-        border-radius: 0rem 0.25rem 0.5rem 0rem;
-    }
+	.loader {
+		background: linear-gradient(to right, $secondary 20%, $primary 100%);
+		background-repeat: no-repeat;
+		width: 0%;
+		height: 0.25rem;
+		border-radius: 0rem 0.25rem 0.5rem 0rem;
+	}
 
-    &.completing {
-        background-color: rgba($white, 0.8);
-        visibility: visible;
-        opacity: 1;
+	&.completing {
+		background-color: rgba($white, 0.8);
+		visibility: visible;
+		opacity: 1;
 
-        .loader {
-            transition: 4s all;
-            width: 75%;
-        }
-    }
+		.loader {
+			transition: 4s all;
+			width: 75%;
+		}
+	}
 
-    &.completed {
-        .loader {
-            transition: $transition-base;
-            width: calc(100% + 0.25rem);
-        }
-    }
+	&.completed {
+		.loader {
+			transition: $transition-base;
+			width: calc(100% + 0.25rem);
+		}
+	}
 }
 
 .fullpageLoader {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1099;
-    background-color: rgba($white, 0.8);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1099;
+	background-color: rgba($white, 0.8);
 
-    &.active {
-        display: flex;
-    }
+	&.active {
+		display: flex;
+	}
 
-    &.initialLoader {
-        background-color: $white;
-    }
+	&.initialLoader {
+		background-color: $white;
+	}
 
-    &:after {
-        content: " ";
-        display: block;
-        width: 3.5rem;
-        height: 3.5rem;
-        margin: 8px;
-        border-radius: 50%;
-        border: 6px solid $primary;
-        border-color: $primary $gray-300 $primary $gray-300;
-        animation: fullpageLoader 1s linear infinite;
-    }
+	&:after {
+		content: ' ';
+		display: block;
+		width: 3.5rem;
+		height: 3.5rem;
+		margin: 8px;
+		border-radius: 50%;
+		border: 6px solid $primary;
+		border-color: $primary $gray-300 $primary $gray-300;
+		animation: fullpageLoader 1s linear infinite;
+	}
 }
 
 .overlayLoader {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba($white, 0.8);
-        z-index: 10;
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba($white, 0.8);
+		z-index: 10;
+	}
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 0.25rem;
-        border-radius: 0.5rem;
-        background-color: $primary;
-        animation: loader-top-line 2s infinite;
-        z-index: 11;
-    }
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 0.25rem;
+		border-radius: 0.5rem;
+		background-color: $primary;
+		animation: loader-top-line 1s infinite;
+		z-index: 11;
+	}
 }

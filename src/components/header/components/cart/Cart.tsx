@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAppSelector } from 'src/hooks';
-import { selectCart } from 'src/state/cart';
+import { cartSelect } from 'src/state/cart';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import style from './Cart.module.scss';
 
 export function Cart() {
-	const cart = useAppSelector(selectCart);
+	const cart = useAppSelector(cartSelect);
 
 	return (
 		<div className={style.cart}>

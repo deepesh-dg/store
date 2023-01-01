@@ -1,9 +1,11 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import { reducers as authReducers } from './auth';
 import { reducers as cartReducers } from './cart';
 
 export const store = configureStore({
 	reducer: {
 		cart: cartReducers,
+		auth: authReducers,
 	},
 });
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './pages/App';
+import Home from './pages/Home';
 import './style.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -8,25 +8,41 @@ import { store } from './state';
 import Auth from './pages/auth/Auth';
 import Login from './pages/auth/pages/Login';
 import Signup from './pages/auth/pages/Signup';
+import { Footer, Header } from './components';
+import Users from './pages/Users/Users';
+
+const defaultLayout = (elements?: JSX.Element): JSX.Element => {
+	return (
+		<>
+			<Header />
+			{elements}
+			<Footer />
+		</>
+	);
+};
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <App />,
+		element: defaultLayout(<Home />),
 	},
 	{
 		path: 'auth',
 		element: <Auth />,
 		children: [
 			{
-				path: 'signup',
+				path: 'login',
 				element: <Login />,
 			},
 			{
-				path: 'login',
+				path: 'signup',
 				element: <Signup />,
 			},
 		],
+	},
+	{
+		path: 'users',
+		element: defaultLayout(<Users />),
 	},
 ]);
 
