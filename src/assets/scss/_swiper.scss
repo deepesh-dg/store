@@ -1,0 +1,16 @@
+/******** Swiper Lib Stylesheets ********/
+@import "swiper/scss";
+
+/******** Create OR Overwrite Swiper Stylesheerts ********/
+.swiper {
+    margin: 0rem 1rem;
+    padding: 0.5rem 0rem;
+
+    @include media-breakpoint-up(xl) {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.swiper-wrapper {
+    padding-bottom: 2rem;
+}

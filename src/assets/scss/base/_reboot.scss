@@ -1,0 +1,48 @@
+/******** Bootstrap Reboot ********/
+@import "bootstrap/scss/reboot";
+
+/******** Custom Reboot Stylesheets ********/
+a {
+    cursor: pointer;
+    transition: $transition-base;
+
+    &.complement {
+        color: inherit;
+
+        &:hover {
+            color: var(--#{$prefix}secondary);
+        }
+    }
+
+    &.invert {
+        color: inherit;
+
+        &:hover {
+            color: var(--#{$prefix}primary-invert);
+        }
+    }
+
+    &.opposite {
+        color: var(--#{$prefix}secondary);
+
+        &:hover {
+            color: var(--#{$prefix}primary);
+        }
+    }
+
+    &.inherit {
+        color: inherit;
+
+        &:hover {
+            color: var(--#{$prefix}primary);
+        }
+    }
+}
+:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+}
+::selection {
+    background-color: lighten($color: $primary, $amount: 10);
+    color: color-contrast(lighten($color: $primary, $amount: 10));
+}

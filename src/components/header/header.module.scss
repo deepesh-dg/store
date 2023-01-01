@@ -1,0 +1,14 @@
+@import 'src/assets/scss/settings';
+
+.header {
+	background-color: var(--#{$prefix}secondary);
+	color: color-contrast($secondary);
+}
+
+.left,
+.right {
+	display: flex;
+	flex-wrap: inherit;
+	align-items: center;
+	justify-content: space-between;
+}

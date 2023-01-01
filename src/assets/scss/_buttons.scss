@@ -1,0 +1,26 @@
+/******** Bootstrap Buttons ********/
+@import "bootstrap/scss/buttons";
+
+/******** Create Buttons OR Override Bootstrap Buttons Stylesheets ********/
+.btn:disabled,
+.btn.disabled,
+fieldset:disabled {
+    cursor: not-allowed;
+}
+
+.btn-submit {
+    // border-radius: $border-radius-pill;
+    @each $color, $value in $theme-colors {
+        &:not(.disabled):not(:disabled).btn-#{$color} {
+            box-shadow: $box-shadow-width rgba($value, 0.3);
+
+            &:hover {
+                box-shadow: $box-shadow-sm-width rgba($value, 0.5);
+            }
+
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
+}
