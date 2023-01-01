@@ -1,5 +1,5 @@
 import useAxios from 'axios-hooks';
-import { Container, Table } from 'react-bootstrap';
+import { Container, Image, Table } from 'react-bootstrap';
 import { conf } from 'src/conf';
 import { User } from './common';
 
@@ -16,6 +16,7 @@ function Users() {
 						<thead>
 							<tr>
 								<th>id</th>
+								<th>Avatar</th>
 								<th>Name</th>
 								<th>Email</th>
 								<th>Password</th>
@@ -26,6 +27,9 @@ function Users() {
 								return (
 									<tr key={user.id}>
 										<td>{user.id}</td>
+										<td>
+											<Image src={user.avatar} className='img-fluid' width={64} />
+										</td>
 										<td>{user.name}</td>
 										<td>{user.email}</td>
 										<td>{user.password}</td>
