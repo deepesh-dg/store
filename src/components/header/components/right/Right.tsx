@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import { Cart } from '../cart';
 
 export function Right() {
 	return (
 		<>
 			<div className='auth me-3'>Login/Logout</div>
-			<div className='cart'>
+			<Link to={'/cart'}>
 				<Cart />
-			</div>
+			</Link>
 		</>
 	);
 }

@@ -1,0 +1,19 @@
+@import 'src/assets/scss/settings';
+
+.cart {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	min-height: 2.5rem;
+
+	.cartTotal {
+		position: absolute;
+		left: 50%;
+		top: 0rem;
+		transform: translateX(-50%);
+	}
+
+	.icon {
+		font-size: 115%;
+	}
+}

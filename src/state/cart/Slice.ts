@@ -26,7 +26,7 @@ export const cartSlice = createSlice({
 		},
 		remove: (cart, action: PayloadAction<string>) => {
 			cart.products = cart.products.filter((product) => product.id !== action.payload);
-			cart.total -= cart.products.filter((product) => product.id == action.payload)[0].quantity;
+			cart.total -= cart.products.filter((product) => product.id === action.payload)[0].quantity;
 		},
 		changeQuantity: (cart, action: PayloadAction<Product>) => {
 			cart.products = cart.products.map((product) => {

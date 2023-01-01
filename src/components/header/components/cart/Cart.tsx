@@ -1,16 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useAppSelector } from '../../../../hooks';
-import { selectCart } from '../../../../state/cart';
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { useAppSelector } from 'src/hooks';
+import { selectCart } from 'src/state/cart';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import style from './Cart.module.scss';
 
 export function Cart() {
 	const cart = useAppSelector(selectCart);
 
 	return (
-		<>
-			<FontAwesomeIcon icon={solid('cart-arrow-down')} />
-		</>
+		<div className={style.cart}>
+			<div className={style.cartTotal}>
+				<span className={style.total}>{cart.total}</span>
+			</div>
+			<div className={style.icon}>
+				<FontAwesomeIcon icon={solid('cart-plus')} />
+			</div>
+		</div>
 	);
 }
 
