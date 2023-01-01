@@ -1,0 +1,9 @@
+@import 'src/assets/scss/settings';
+
+.profile {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	border: 1px solid var(--#{$prefix}gray-300);
+	background-color: $white;
+}

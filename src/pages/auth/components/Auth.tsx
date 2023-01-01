@@ -1,6 +1,6 @@
 import { FormEvent, useId } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import style from './Auth.module.scss';
 
 type Props = {
@@ -28,6 +28,12 @@ function Auth(props: Props) {
 	let name: any;
 	let email: any;
 	let password: any;
+
+	const navigate = useNavigate();
+
+	function handleBtnLink(path: string) {
+		navigate(path);
+	}
 
 	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -100,11 +106,11 @@ function Auth(props: Props) {
 					<small className='form-text'>{footerText}</small>
 				</span>
 			</div>
-			<Link to={btn.url} style={btn.style}>
-				<div className='d-grid gap-2'>
-					<Button variant='dark'>{btn.text}</Button>
-				</div>
-			</Link>
+			<div className='d-grid gap-2'>
+				<Button variant='dark' onClick={() => handleBtnLink(btn.url)}>
+					{btn.text}
+				</Button>
+			</div>
 		</>
 	);
 }

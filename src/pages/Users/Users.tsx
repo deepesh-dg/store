@@ -13,7 +13,7 @@ function Users() {
 			<div className='py-5'>
 				<Container>
 					<Table striped bordered hover responsive>
-						<thead>
+						<thead className='table-primary'>
 							<tr>
 								<th>id</th>
 								<th>Avatar</th>

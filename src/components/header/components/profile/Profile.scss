@@ -1,0 +1,25 @@
+.profileDropdownContainer {
+	.dropdown-toggle {
+		position: relative;
+		padding-right: 0.75rem;
+
+		&::after {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			opacity: 0.5;
+			right: 0rem;
+		}
+	}
+
+	&:hover {
+		.dropdown-toggle::after {
+			opacity: 0.8;
+		}
+	}
+
+	.dropdown-menu {
+		width: 230px;
+		text-align: center;
+	}
+}
