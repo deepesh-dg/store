@@ -1,0 +1,11 @@
+@import 'src/assets/scss/settings';
+
+.category {
+	background-color: $white;
+	padding: 0.5rem;
+	border-radius: $border-radius;
+
+	img {
+		border-radius: $border-radius;
+	}
+}

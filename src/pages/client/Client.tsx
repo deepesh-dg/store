@@ -4,7 +4,9 @@ function Client() {
 	return (
 		<>
 			<Header />
-			<LazyLoading />
+			<main id='main' className='main'>
+				<LazyLoading />
+			</main>
 			<Footer />
 		</>
 	);

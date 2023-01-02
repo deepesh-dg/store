@@ -1,0 +1,14 @@
+@import 'src/assets/scss/settings';
+
+.container {
+	position: relative;
+	z-index: 1;
+}
+
+.categories {
+	padding: 2rem 0rem;
+
+	@include media-breakpoint-up(lg) {
+		margin-top: -200px;
+	}
+}
