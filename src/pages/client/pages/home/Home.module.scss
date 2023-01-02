@@ -1,14 +1,19 @@
 @import 'src/assets/scss/settings';
 
-.container {
+.bgOverlay {
+	background: linear-gradient(-180deg, transparent, var(--#{$prefix}body-bg));
 	position: relative;
 	z-index: 1;
 }
 
+.container {
+	padding-bottom: 2rem;
+}
+
 .categories {
-	padding: 2rem 0rem;
+	padding-top: 20rem;
 
 	@include media-breakpoint-up(lg) {
-		margin-top: -200px;
+		margin-top: -32.5rem;
 	}
 }

@@ -1,0 +1,21 @@
+@import 'src/assets/scss/settings';
+
+.container {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.price {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.sideBox {
+	border-radius: $border-radius;
+	border: 1px solid var(--#{$prefix}gray-500);
+	padding: 1rem;
+}
+
+.btn {
+	--#{$prefix}btn-border-radius: 2rem;
+}

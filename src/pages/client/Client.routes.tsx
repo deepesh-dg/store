@@ -6,6 +6,7 @@ const HomeComponent = lazy(() => import('./pages/home/Home'));
 const UsersComponent = lazy(() => import('./pages/users/Users'));
 const CartComponent = lazy(() => import('./pages/cart/Cart'));
 const CategoryComponent = lazy(() => import('./pages/category/Category'));
+const ProductDetailsComponent = lazy(() => import('./pages/product/Product'));
 
 export const routes: JSX.Element = (
 	<Route path='' element={<Client />}>
@@ -13,5 +14,6 @@ export const routes: JSX.Element = (
 		<Route path='users' element={<UsersComponent />} />
 		<Route path='cart' element={<CartComponent />} />
 		<Route path='category/:categoryId' element={<CategoryComponent />} />
+		<Route path='product/:productId' element={<ProductDetailsComponent />} />
 	</Route>
 );
