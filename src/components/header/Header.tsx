@@ -26,6 +26,8 @@ export function Header() {
 	};
 
 	useEffect(() => {
+		console.log('header rendered');
+
 		window.addEventListener('resize', handleScreen);
 
 		return () => {

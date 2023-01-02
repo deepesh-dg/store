@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { conf } from 'src/conf';
-import { User } from 'src/pages/Users/common';
+import { User } from 'src/pages/client/pages/users/common';
 import { authSlice } from './Slice';
 
 export type LoginResponseData = { access_token: string; refresh_token: string };

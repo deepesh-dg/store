@@ -36,7 +36,9 @@ export function Profile() {
 					<>
 						<NavDropdown.ItemText>
 							<ButtonGroup>
-								<Button onClick={() => handleBtnLink('/auth/login')}>Sign In</Button>
+								<Button onClick={() => handleBtnLink('/auth/login')} variant='tertiary'>
+									Sign In
+								</Button>
 								<Button onClick={() => handleBtnLink('/auth/signup')}>Sign Up</Button>
 							</ButtonGroup>
 						</NavDropdown.ItemText>
