@@ -1,12 +1,10 @@
-import { Outlet } from 'react-router-dom';
-import { Footer, Header } from 'src/components';
-import style from './Client.module.scss';
+import { Footer, Header, LazyLoading } from 'src/components';
 
 function Client() {
 	return (
 		<>
 			<Header />
-			<Outlet />
+			<LazyLoading />
 			<Footer />
 		</>
 	);
