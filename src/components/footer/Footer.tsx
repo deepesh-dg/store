@@ -16,7 +16,7 @@ export function Footer() {
 				</p>
 				<p className='mt-2'>
 					<a href='http://github.com/deepesh-dg/amazon' target='_blank' rel='noopener noreferrer'>
-						Github Source Code
+						Check out the Source Code on Github
 					</a>
 				</p>
 			</Container>
