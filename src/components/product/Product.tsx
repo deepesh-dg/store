@@ -23,7 +23,7 @@ export function Product({ product }: { product: IProduct }) {
 				</p> */}
 				<p className={style.price}>
 					<sup>₹</sup>
-					{product.price}
+					{product.price.toFixed(2)}
 				</p>
 				<AddToCartButton productId={product.id.toString()} className='mb-2' />
 				<BuyNowButton productId={product.id.toString()} />

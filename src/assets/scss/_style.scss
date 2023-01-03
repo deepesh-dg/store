@@ -51,9 +51,6 @@
 @import 'bootstrap/scss/utilities/api';
 
 /******** Additional Styles ********/
-.sideBox {
-	border-radius: $border-radius;
-	background-color: $white;
-	box-shadow: $box-shadow-sm;
-	padding: 1rem;
+.bgLightDark {
+	background-color: #eaeded !important;
 }

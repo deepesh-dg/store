@@ -29,8 +29,12 @@ export const cartSlice = createSlice({
 			cart.total += action.payload.quantity;
 		},
 		remove: (cart, action: PayloadAction<string>) => {
-			cart.products = cart.products.filter((product) => product.id !== action.payload);
 			cart.total -= cart.products.filter((product) => product.id === action.payload)[0].quantity;
+			cart.products = cart.products.filter((product) => product.id !== action.payload);
+		},
+		empty: (cart) => {
+			cart.products = [...initialCart.products];
+			cart.total = initialCart.total;
 		},
 		changeQuantity: (cart, action: PayloadAction<Product>) => {
 			let products: Product[];

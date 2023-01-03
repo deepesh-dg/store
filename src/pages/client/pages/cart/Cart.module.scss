@@ -1,0 +1,13 @@
+@import 'src/assets/scss/settings';
+
+.container {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.box {
+	background-color: $white;
+	padding: 1.25rem 1rem 1.75rem;
+	border-radius: $border-radius;
+	// box-shadow: $box-shadow-sm;
+}

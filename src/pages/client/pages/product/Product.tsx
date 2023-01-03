@@ -43,7 +43,7 @@ function Product() {
 							<hr />
 							<p className={style.price}>
 								<sup>₹</sup>
-								{data.price}
+								{data.price.toFixed(2)}
 							</p>
 							<p>
 								<small>Inclusive of all taxes</small>
@@ -54,8 +54,7 @@ function Product() {
 							<div className={style.sideBox}>
 								<p className={style.price + ' mb-2'}>
 									<sup>₹</sup>
-									{data.price}
-									<sup>00</sup>
+									{data.price.toFixed(2)}
 								</p>
 								<p className='mb-3'>{data.description}</p>
 
