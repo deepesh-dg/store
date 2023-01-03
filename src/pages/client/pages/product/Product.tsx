@@ -1,32 +1,19 @@
 import useAxios from 'axios-hooks';
-import { Button, Col, Container, Form, Image, InputGroup, Row } from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Col, Container, Image, Row } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 import { Product as IProduct } from 'src/common';
+import { AddToCartButton, BuyNowButton } from 'src/components';
 import { conf } from 'src/conf';
-import { useAppDispatch } from 'src/hooks';
-import { add as addToCart } from 'src/state/cart';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import style from './Product.module.scss';
 
 function Product() {
-	const range = (n: number) => Array.from(Array(n).keys());
-
 	const { productId } = useParams();
 	const [{ data, error, loading }] = useAxios<IProduct, { message: string }>({
 		baseURL: conf.api,
 		url: 'products/' + productId,
 	});
-
-	const navigate = useNavigate();
-	const dispatch = useAppDispatch();
-
-	let quantityRef: HTMLSelectElement;
-
-	const buyNow = () => {
-		dispatch(addToCart({ id: data?.id.toString() || '', quantity: Number(quantityRef.value) }));
-		navigate('/checkout');
-	};
 
 	return (
 		<>
@@ -70,41 +57,10 @@ function Product() {
 									{data.price}
 									<sup>00</sup>
 								</p>
-								<p className={style.description + ' mb-2'}>{data.description}</p>
-								<InputGroup className='mb-3'>
-									<Form.Label style={{ display: 'flex', alignItems: 'center' }}>
-										Quantity:&nbsp;
-									</Form.Label>
-									<Form.Select ref={(ref: any) => (quantityRef = ref)}>
-										{range(10).map((num) => (
-											<option value={num + 1} key={num + 1}>
-												{num + 1}
-											</option>
-										))}
-									</Form.Select>
-								</InputGroup>
+								<p className='mb-3'>{data.description}</p>
 
-								<div className='d-grid gap-2 mb-2'>
-									<Button
-										variant='tertiary'
-										className={style.btn}
-										onClick={() =>
-											dispatch(
-												addToCart({
-													id: data.id.toString(),
-													quantity: Number(quantityRef.value),
-												})
-											)
-										}
-									>
-										Add To Cart
-									</Button>
-								</div>
-								<div className='d-grid gap-2'>
-									<Button variant='primary' className={style.btn} onClick={buyNow}>
-										Buy Now
-									</Button>
-								</div>
+								<AddToCartButton productId={data.id.toString()} className='mb-2' />
+								<BuyNowButton productId={data.id.toString()} />
 							</div>
 						</Col>
 					</Row>

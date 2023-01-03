@@ -33,13 +33,20 @@ export const cartSlice = createSlice({
 			cart.total -= cart.products.filter((product) => product.id === action.payload)[0].quantity;
 		},
 		changeQuantity: (cart, action: PayloadAction<Product>) => {
-			cart.products = cart.products.map((product) => {
-				if (product.id === action.payload.id) return action.payload;
-				return product;
-			});
+			let products: Product[];
+
+			if (action.payload.quantity === 0)
+				products = cart.products.filter((product) => product.id !== action.payload.id);
+			else
+				products = cart.products.map((product) => {
+					if (product.id === action.payload.id) return action.payload;
+					return product;
+				});
+
 			cart.total +=
 				action.payload.quantity -
 				cart.products.filter((product) => product.id === action.payload.id)[0].quantity;
+			cart.products = products;
 		},
 	},
 });

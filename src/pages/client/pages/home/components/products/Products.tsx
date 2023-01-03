@@ -7,7 +7,7 @@ import { conf } from 'src/conf';
 export function Products() {
 	const [{ data, error, loading }] = useAxios<IProduct[], { message: string }>({
 		baseURL: conf.api,
-		url: 'categories/5/products?offset=0&limit=18',
+		url: 'products?offset=0&limit=18',
 	});
 
 	return (

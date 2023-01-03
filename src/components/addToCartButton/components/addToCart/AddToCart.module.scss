@@ -1,0 +1,5 @@
+@import 'src/assets/scss/settings';
+
+.btn {
+	--#{$prefix}btn-border-radius: 2rem;
+}
