@@ -5,8 +5,10 @@ $dark: #242b2e;
 
 /* Theme Colors */
 // $primary: #ffd814;
-$primary: #ffa41c;
+// $primary: #ffa41c;
+$primary: #cad5e2;
 $secondary: #131921;
+// $tertiary: #ffd814;
 $tertiary: #ffd814;
 $primary-invert: invert($primary);
 
@@ -19,8 +21,8 @@ $border-radius-sm: #{$border-radius * 0.75};
 $border-radius-lg: #{$border-radius * 1.5};
 
 /* Link */
-// $link-color: var(--#{$prefix}primary);
-// $link-hover-color: var(--#{$prefix}tertiary);
+$link-color: var(--#{$prefix}dark);
+$link-hover-color: var(--#{$prefix}tertiary);
 $link-decoration: none;
 $link-hover-decoration: underline;
 

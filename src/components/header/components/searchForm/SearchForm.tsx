@@ -11,7 +11,7 @@ export function SearchForm() {
 	return (
 		<Form onSubmit={search} className={style.form}>
 			<InputGroup>
-				<Form.Control placeholder='Search Amazon' />
+				<Form.Control placeholder='Search Products' />
 				<Button type='submit' variant='primary'>
 					Search
 				</Button>

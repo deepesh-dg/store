@@ -1,16 +1,12 @@
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import style from './Sliders.module.scss';
+import slider1 from 'src/assets/images/slider-1.jpg';
+import slider2 from 'src/assets/images/slider-2.jpg';
+import slider3 from 'src/assets/images/slider-3.jpg';
 
 export function Sliders() {
-	const sliders: string[] = [
-		'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/610itsE9fJL._SX3000_.jpg',
-		'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/71cQMXCLSvL._SX3000_.jpg',
-		'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/51DWgNo1fdL._SX3000_.jpg',
-		'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61WE+jHT+QL._SX3000_.jpg',
-		'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/81ktw-jnzkL._SX3000_.jpg',
-		'https://m.media-amazon.com/images/I/51AQhraI0-L._SX3000_.png',
-	];
+	const sliders: string[] = [slider1, slider2, slider3];
 	return (
 		<Swiper
 			spaceBetween={0}

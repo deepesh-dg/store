@@ -12,9 +12,9 @@ type Props = {
 
 function Auth(props: Props) {
 	const heading = props.type === 'signup' ? 'Sign Up' : 'Sign In';
-	const footerText = props.type === 'signup' ? 'Already have account?' : 'New to Amazon?';
+	const footerText = props.type === 'signup' ? 'Already have account?' : 'New to Store?';
 	const btn = {
-		text: props.type === 'signup' ? 'Sign In' : 'Create your Amazon account',
+		text: props.type === 'signup' ? 'Sign In' : 'Create your Store account',
 		url: props.type === 'signup' ? '/auth/login' : '/auth/signup',
 		style: {
 			textDecoration: 'none',
@@ -95,7 +95,7 @@ function Auth(props: Props) {
 				</Form.Group>
 				<Form.Group className='text-center'>
 					<Form.Text>
-						By continuing, you agree to Amazon's{' '}
+						By continuing, you agree to Store's{' '}
 						<Link to={'/conditions-of-use'}>Conditions of Use</Link> and{' '}
 						<Link to={'/privacy-notice'}>Privacy Notice</Link>.
 					</Form.Text>

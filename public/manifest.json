@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "store",
+  "name": "Store",
   "icons": [
     {
-      "src": "amazon-black.ico",
+      "src": "black-logo.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "amazon-black.ico",
+      "src": "black-logo.ico",
       "type": "image/x-icon",
       "sizes": "192x192"
     },
     {
-      "src": "amazon-black.ico",
+      "src": "black-logo.ico",
       "type": "image/x-icon",
       "sizes": "512x512"
     }

@@ -8,7 +8,7 @@ export function Right() {
 			<div className='auth me-3'>
 				<Profile />
 			</div>
-			<Link to={'/cart'}>
+			<Link to={'/cart'} style={{ color: 'var(--dg-tertiary)' }}>
 				<Cart />
 			</Link>
 		</>
