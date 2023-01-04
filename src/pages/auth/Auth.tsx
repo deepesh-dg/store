@@ -1,7 +1,7 @@
 import { Container, Image } from 'react-bootstrap';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import style from './Auth.module.scss';
-import logo from 'src/assets/images/black-logo.png';
+import logo from 'src/assets/images/logo.png';
 import { useAppSelector } from 'src/hooks';
 import { authSelect } from 'src/state/auth';
 import { AuthStatus } from 'src/common';

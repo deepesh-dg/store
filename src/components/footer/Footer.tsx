@@ -1,6 +1,6 @@
 import { Container, Image } from 'react-bootstrap';
 import style from './Footer.module.scss';
-import logo from 'src/assets/images/white-logo.png';
+import logo from 'src/assets/images/logo.png';
 import { Link } from 'react-router-dom';
 
 export function Footer() {

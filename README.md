@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Store - Online Shopping Website
+
+🏠 [Live Preview](https://store.deepeshdg.com/)
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

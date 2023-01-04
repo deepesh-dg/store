@@ -1,5 +1,5 @@
 import { Navbar } from 'react-bootstrap';
-import logo from 'src/assets/images/white-logo.png';
+import logo from 'src/assets/images/logo.png';
 import style from './Brand.module.scss';
 import { Link } from 'react-router-dom';
 
